@@ -17,14 +17,14 @@ const Display = () => {
     return (
         <div className='display-container'>
             <div className='display-count'>
-                <p>Balls: {balls} | Strikes: {strikes}</p>
+                <p>Balls: {balls} |<span data-testid='add-strike-count'>Strikes: {strikes}</span></p>
             </div>
             <Dashboard
-             strikes={strikes} 
-             balls={balls} 
-             addStrike={addStrike}
-             addBall={addBall}
-             />
+                strikes={strikes} 
+                balls={balls} 
+                addStrike={addStrike}
+                addBall={addBall}
+            />
         </div>
     )
 }

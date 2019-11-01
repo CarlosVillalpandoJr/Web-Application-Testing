@@ -28,10 +28,10 @@ const Dashboard = (props) => {
 
     return (
         <div className='dashboard-container'>
-            <button onClick={ball}>Add Ball</button>
-            <button onClick={strike}>Add Strike</button>
+            <button data-testid='add-ball-button' onClick={ball}>Add Ball</button>
+            <button data-testid='add-strike-button' onClick={strike}>Add Strike</button>
             <button onClick={strike}>Foul</button>
-            <button onClick={hit}>Hit</button>
+            <button onClick={hit}>Hit </button>
         </div>
     )
 }
