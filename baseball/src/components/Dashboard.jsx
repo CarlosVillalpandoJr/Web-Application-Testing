@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { addOneFunction, resetFunction } from './Functions';
 
 
 const Dashboard = (props) => {
@@ -6,17 +7,17 @@ const Dashboard = (props) => {
 
     const strike = () => {
         if(props.strikes < 2) {
-        props.addStrike(props.strikes + 1)
+        addOneFunction(props.addStrike, props.strikes)
         } else {
-        props.addStrike(props.strikes * 0)
+        resetFunction(props.addStrike, props.strikes)
         }
     }
 
     const ball = () => {
         if(props.balls < 3) {
-        props.addBall(props.balls + 1)
+        addOneFunction(props.addBall, props.balls)
         } else {
-        props.addBall(props.balls * 0)
+        resetFunction(props.addBall, props.balls)
         }
     }
 
